@@ -7,12 +7,9 @@ import java.util.Scanner;
 
 public class CommandController {
 
-    public CommandServer SearchControlsCommand(){
+    public CommandServer SearchControlsCommand(String command){
         CommandServer server = null;
-        Scanner s = new Scanner(System.in);
-        String m =s.nextLine();
-        String arr[]=m.split("\\s");
-        switch (arr[0]){
+        switch (command){
             case "-c": server = new CharacterCountServer();break;
             case "-w": server = new WordCountServer();break;
             case "-l": server = new RowCountServer();break;
