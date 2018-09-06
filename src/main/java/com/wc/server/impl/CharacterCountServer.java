@@ -20,14 +20,16 @@ public class CharacterCountServer implements CommandServer {
             while ((str = br.readLine()) != null) {
                 sb.append(str);
             }
+
+            TreeMap<Character, Integer> tm = Pross(sb.toString());
+            System.out.println("字符统计结果为：" + tm);
+            System.out.println();
+
         } catch (FileNotFoundException e) {
-            e.printStackTrace();
+            System.out.println("错误：文件找不到");
         } catch (IOException e){
-            e.printStackTrace();
+            System.out.println("错误：文件读入异常");
         }
-        TreeMap<Character, Integer> tm = Pross(sb.toString());
-        System.out.println("字符统计结果为：" + tm);
-        System.out.println();
     }
 
     // 统计数字或者字符出现的次数

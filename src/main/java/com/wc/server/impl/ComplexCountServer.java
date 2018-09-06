@@ -18,19 +18,18 @@ public class ComplexCountServer implements CommandServer {
         try {
             br = new BufferedReader(new FileReader(path));
             String line = null;
-            while((line = br.readLine()) != null)
+            while((line = br.readLine()) != null){
                 pattern(line);
+            }
+            System.out.println("注释行： " + cntNode);
+            System.out.println("空行： " + cntSpace);
+            System.out.println("代码行： " + cntCode);
+            System.out.println();
         } catch (FileNotFoundException e) {
-            e.printStackTrace();
+            System.out.println("错误：文件找不到");
         } catch (IOException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
+            System.out.println("错误：文件读入异常");
         }
-
-        System.out.println("注释行： " + cntNode);
-        System.out.println("空行： " + cntSpace);
-        System.out.println("代码行： " + cntCode);
-        System.out.println();
     }
 
     public void pattern(String line) {

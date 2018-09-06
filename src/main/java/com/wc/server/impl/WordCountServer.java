@@ -29,9 +29,9 @@ public class WordCountServer implements CommandServer {
             list.forEach(it -> System.out.println(it.getKey()+" "+it.getValue()));
             System.out.println();
         } catch (FileNotFoundException e){
-            e.printStackTrace();
+            System.out.println("错误：文件找不到");
         } catch (IOException e){
-            e.printStackTrace();
+            System.out.println("错误：文件读入异常");
         }
     }
 }

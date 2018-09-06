@@ -15,7 +15,7 @@ public class ConditionFileServer implements CommandServer {
         String fileName =s.nextLine();
         List<String> file = searchFile(path, fileName);
         if (file.isEmpty()){
-            System.out.println("暂无此文件");
+            System.out.println("错误：暂无此文件");
         }else {
             file.forEach(it -> System.out.println(it));
             System.out.println();

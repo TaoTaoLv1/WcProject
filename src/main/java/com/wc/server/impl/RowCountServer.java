@@ -19,12 +19,12 @@ public class RowCountServer implements CommandServer {
             while ((str = br.readLine()) != null) {
                 ++line;
             }
+            System.out.println("文件行数：" + line);
+            System.out.println();
         } catch (FileNotFoundException e) {
-            e.printStackTrace();
+            System.out.println("错误：文件找不到");
         } catch (IOException e){
-            e.printStackTrace();
+            System.out.println("错误：文件读入异常");
         }
-        System.out.println("文件行数：" + line);
-        System.out.println();
     }
 }
