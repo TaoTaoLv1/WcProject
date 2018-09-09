@@ -15,6 +15,8 @@ public class CommandController {
             case "-l": server = new RowCountServer();break;       //返回文件行数
             case "-s": server = new ConditionFileServer();break;  //搜索文件名
             case "-a": server = new ComplexCountServer();break;   //统计代码行 / 空行 / 注释行
+            default:
+                System.out.println("参数输入不正确");
         }
         return server;
     }
