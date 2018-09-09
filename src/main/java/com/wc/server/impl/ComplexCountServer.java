@@ -17,7 +17,7 @@ public class ComplexCountServer implements CommandServer {
         BufferedReader br = null;
         try {
             br = new BufferedReader(new FileReader(path));
-            String line = null;
+            String line = "";
             while((line = br.readLine()) != null){
                 pattern(line);
             }

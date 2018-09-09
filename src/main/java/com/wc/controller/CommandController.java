@@ -3,8 +3,6 @@ package com.wc.controller;
 import com.wc.server.CommandServer;
 import com.wc.server.impl.*;
 
-import java.util.Scanner;
-
 public class CommandController {
 
     public CommandServer SearchControlsCommand(String command){

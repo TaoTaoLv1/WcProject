@@ -32,11 +32,11 @@ public class ConditionFileServer implements CommandServer {
         return null;
     }
 
-    public void getFilesList(File file,String fileName,List<String> list){
+    public void getFilesList(File file, String fileName, List<String> list){
         if(file.exists()){
             if(file.isDirectory()){
                 File[] files = file.listFiles();
-                if(files!=null&&files.length>0){
+                if(files != null && files.length > 0){
                     for(File f:files){
                         getFilesList(f,fileName,list);
                     }
